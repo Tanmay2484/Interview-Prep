@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+   int arr[6]={1,1,2,3,4,4};
+   int index=0;
+   for(int i=1;i<6;i++){
+       if(arr[index]!=arr[i]){   // time complexity= O(N)
+           index++;            //space comp = O(1);
+           arr[index]=arr[i];
+       }
+   }
+  cout<<index+1;
+}
+// else
+  #include <bits/stdc++.h>
+using namespace std;
+int main() {
+   int arr[6]={1,1,2,3,4,4};
+   set<int>s;                  //time comp = O(N)
+   for(int i=0;i<6;i++){       // space comp = O(N)
+       s.insert(arr[i]);
+   }
+   //cout<<s.size();
+    for(auto i:s)
+        cout<<i<<" ";
+}
