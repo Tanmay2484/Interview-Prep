@@ -13,3 +13,21 @@ int main(){
     }
     cout<<s;
 }
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    unordered_set<char> vowels = {'a', 'e', 'i', 'o', 'u'};
+    string s;
+    cin >> s;
+    string result;
+
+    for (char c : s) {
+        if (vowels.find(c) == vowels.end()) {
+            result += c;
+        }
+    }
+
+    cout << result;
+    return 0;
+}
