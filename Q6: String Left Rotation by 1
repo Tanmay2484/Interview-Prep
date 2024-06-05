@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string s;
+    cin >> s;
+    
+    int n = s.size();
+    string doubled = s + s; // Concatenate the string with itself
+
+    // Print all rotations
+    for (int i = 0; i < n; i++) {
+        cout << doubled.substr(i, n) << endl;
+    }
+
+    return 0;
+}
